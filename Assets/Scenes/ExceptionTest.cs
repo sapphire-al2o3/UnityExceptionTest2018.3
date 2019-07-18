@@ -84,6 +84,17 @@ public class ExceptionTest : MonoBehaviour
         text.text = elapsed.ToString();
     }
 
+	public void RunTest5()
+	{
+		float start = Time.realtimeSinceStartup;
+		for (int i = 0; i < 100; i++)
+		{
+			Test();
+		}
+		float elapsed = Time.realtimeSinceStartup - start;
+		text.text = elapsed.ToString();
+	}
+
     void Start()
     {
         dict.Add("b", 0);
