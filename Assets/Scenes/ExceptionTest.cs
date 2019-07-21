@@ -67,6 +67,15 @@ public class ExceptionTest : MonoBehaviour
         return dict[key];
     }
 
+    void Test4()
+    {
+        try
+        {
+            throw new System.Exception();
+        }
+        catch { }
+    }
+
     public void RunTest()
     {
         float start = Time.realtimeSinceStartup;
@@ -128,6 +137,17 @@ public class ExceptionTest : MonoBehaviour
         for (int i = 0; i < 100; i++)
         {
             Test1();
+        }
+        float elapsed = Time.realtimeSinceStartup - start;
+        text.text = elapsed.ToString();
+    }
+
+    public void RunTest7()
+    {
+        float start = Time.realtimeSinceStartup;
+        for (int i = 0; i < 100; i++)
+        {
+            Test4();
         }
         float elapsed = Time.realtimeSinceStartup - start;
         text.text = elapsed.ToString();
