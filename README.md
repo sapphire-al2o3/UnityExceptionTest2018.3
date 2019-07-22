@@ -1,0 +1,3 @@
+# UnityExceptionTest2018.3
+
+il2cppのARM64ビルドすると例外がめちゃくちゃ遅い挙動のテスト
